@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static CheeseMakingApp.Utilities;
 
@@ -59,6 +52,7 @@ namespace CheeseMakingApp
         private void WorkerForm_Load(object sender, EventArgs e)
         {
             fillAll();
+            labelProcess.Text = checkNextStep(comboBoxBatches.SelectedIndex);
         }
 
         private void panelActivity_MouseEnter(object sender, EventArgs e)
@@ -93,7 +87,7 @@ namespace CheeseMakingApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TableForm tableForm = new TableForm(); 
+            TableForm tableForm = new TableForm();
             fillDataGrid("SELECT Batches.Id, Sorts._name, Batches.DateOfStart FROM dbo.Batches INNER JOIN Sorts ON Batches.SortId = Sorts.Id", tableForm.dataGridView1);
             tableForm.dataGridView1.Columns[1].HeaderText = "Sort";
             tableForm.Text = "Batches";

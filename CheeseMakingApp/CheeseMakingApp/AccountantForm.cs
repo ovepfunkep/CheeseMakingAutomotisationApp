@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static CheeseMakingApp.Utilities;
 
@@ -18,7 +11,7 @@ namespace CheeseMakingApp
             InitializeComponent();
             loginFormTaken = loginFormGiven;
         }
-        
+
         private LoginForm loginFormTaken;
 
         private void purchasesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -30,15 +23,10 @@ namespace CheeseMakingApp
 
         private void Accountant_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cheeseMakingDataSet.Supliers". При необходимости она может быть перемещена или удалена.
             this.supliersTableAdapter.Fill(this.cheeseMakingDataSet.Supliers);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cheeseMakingDataSet.Locations". При необходимости она может быть перемещена или удалена.
             this.locationsTableAdapter.Fill(this.cheeseMakingDataSet.Locations);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cheeseMakingDataSet.Customers". При необходимости она может быть перемещена или удалена.
             this.customersTableAdapter.Fill(this.cheeseMakingDataSet.Customers);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cheeseMakingDataSet.Sales". При необходимости она может быть перемещена или удалена.
             this.salesTableAdapter.Fill(this.cheeseMakingDataSet.Sales);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cheeseMakingDataSet.Purchases". При необходимости она может быть перемещена или удалена.
             this.purchasesTableAdapter.Fill(this.cheeseMakingDataSet.Purchases);
 
         }

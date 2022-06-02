@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 
@@ -12,7 +7,7 @@ namespace CheeseMakingApp
     class Utilities
     {
         public static string connectionString = @"Data Source=Dbsrv\sql2021;Initial Catalog=CheeseMaking;Integrated Security=True";
-        
+
         public static bool checkUser(string username, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -103,7 +98,7 @@ namespace CheeseMakingApp
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     array[dataSet.Tables[0].Rows.IndexOf(row)] = new object[row.ItemArray.Length];
-                    row.ItemArray.CopyTo(array[dataSet.Tables[0].Rows.IndexOf(row)],0);
+                    row.ItemArray.CopyTo(array[dataSet.Tables[0].Rows.IndexOf(row)], 0);
                 }
                 return array;
             }

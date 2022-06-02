@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static CheeseMakingApp.Utilities;
-using System.Data.SqlClient;
 
 namespace CheeseMakingApp
 {
@@ -48,7 +40,7 @@ namespace CheeseMakingApp
         {
             textBoxLogin.Text = "TyabinIA";
             textBoxPassword.Text = "123";
-            buttonEnter_Click(sender,e);
+            buttonEnter_Click(sender, e);
         }
 
         private void buttonWorker_Click(object sender, EventArgs e)
